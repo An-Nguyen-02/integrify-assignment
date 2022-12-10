@@ -5,12 +5,8 @@ import SearchBox from './components/searchBox/SearchBox';
 import CountryTable from './components/countryTable/countryTable';
 import { useState, useEffect, useContext} from 'react';
 import {CountriesContext} from './contexts/countriesContext'
-import useFetch from './contexts/callAPI/UseFetch';
 function App() {
-  const url = "https://restcountries.com/v3.1/all"
-  //const url = "https://jsonplaceholder.typicode.com/users"
-  const {data, loading, error} = useFetch(url)
-  // const {countries, loading} = useContext(CountriesContext)
+  const {countries, loading} = useContext(CountriesContext)
   const [searchField, setSearchField] = useState('')
   const [filteredCountries, setFilteredCountries] = useState([])
   const props = {
@@ -33,12 +29,12 @@ function App() {
   useEffect(()=>{
     if (!loading){
 
-      setFilteredCountries(data.filter(country => {
+      setFilteredCountries(countries.filter(country => {
         return country.name.common.toString().toLowerCase().includes(searchField.toLowerCase())
       }))
     }
 
-  },[data, searchField, loading])
+  },[countries, searchField, loading])
 
   const onSearchChange = (e) => {
     setSearchField(e.target.value)
