@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect same snapshot CountryCard 1`] = `<CountryCard />`;
+
+exports[`expect same snapshot CountryTable 1`] = `<CountryTable />`;
+
+exports[`expect same snapshot SearchBox 1`] = `<SearchBox />`;
+
+exports[`expect same snapshot Spinner 1`] = `<Spinner />`;
