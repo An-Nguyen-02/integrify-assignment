@@ -1,15 +1,20 @@
-import * as React from 'react';
+import {lazy, Suspense} from 'react';
 import './App.css';
-import HomePage from './routes/home/HomePage';
+import Spinner from './components/spinner/Spinner';
 import {Routes, Route} from 'react-router-dom'
-import CountryPage from './routes/country/CountryPage';
+
+const HomePage = lazy(() => import('./routes/home/HomePage'))
+const CountryPage = lazy(() => import('./routes/country/CountryPage'))
+
 function App() {
 
   return (
-    <Routes>
-      <Route path='/' index element={<HomePage />} />
-      <Route path=':country' element={<CountryPage />} />
-    </Routes>
+    <Suspense fallback={<Spinner />}>
+      <Routes>
+        <Route path='/' index element={<HomePage />} />
+        <Route path=':country' element={<CountryPage />} />
+      </Routes>
+    </Suspense>
   );
 }
 
