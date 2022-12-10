@@ -14,7 +14,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-
+import { Link } from 'react-router-dom';
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -26,10 +26,26 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function CountryCard(props) {
-  const {name, capital, flag, region, subRegion, latlng, population,
-        independent, officialName, area, capitalLatLng, coatOfArms, unMember,
-        fifa, startOfWeek} = props
+export default function CountryCard(country) {
+  const props = country.country
+  const name = props.name.common
+  const capital = props.capital
+  const region = props.region
+  const subRegion = props.subregion
+  const latlng = props.latlng
+  const population = props.population
+  const independent = props.independent
+  const area = props.area
+  const unMember = props.unMember
+  const fifa = props.fifa
+  const startOfWeek = props.startOfWeek
+  const capitalLatLng = props.capitalInfo.latlng
+  const coatOfArms = props.coatOfArms.svg
+  const officialName = props.name.official
+  const flag = props.flags.svg
+  const gglMap = props.maps.googleMaps
+
+
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -66,12 +82,14 @@ export default function CountryCard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="go to homepage">
-          <ArrowBackIosIcon />
-        </IconButton>
+        <Link to="..">
+          <IconButton aria-label="go to homepage">
+              <ArrowBackIosIcon />
+          </IconButton>
+        </Link>
         <IconButton aria-label="location" onClick={(e)=> {
           e.preventDefault()
-          window.open(`https://maps.google.com/?q=${latlng[0]},${latlng[1]}`,"_blank")
+          window.open(gglMap,"_blank")
         }}>
           <LocationOnIcon />
         </IconButton>

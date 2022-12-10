@@ -14,6 +14,7 @@ import { visuallyHidden } from '@mui/utils';
 import { ListItem, List } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import {Link} from 'react-router-dom'
 // sorting in the name column is not working
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -154,6 +155,7 @@ export default function CountryTable({rows}) {
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
   return (
+
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <TableContainer>
@@ -201,9 +203,11 @@ export default function CountryTable({rows}) {
                         </List>
                       </TableCell>
                       <TableCell align="right">
-                            <IconButton>
-                                <ArrowForwardIosIcon />
-                            </IconButton>
+                        <Link to={row.name.common.toString().toLowerCase()}>
+                          <IconButton>
+                              <ArrowForwardIosIcon />
+                          </IconButton>
+                        </Link>
                       </TableCell>
                     </TableRow>
                   );
