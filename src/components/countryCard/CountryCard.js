@@ -48,9 +48,9 @@ export default function CountryCard(country) {
 
   const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
+  const handleExpandClick = React.useCallback(() => {
     setExpanded(!expanded);
-  };
+  },[expanded]);
 
   return (
     <Card sx={{ maxWidth: 345 }}>

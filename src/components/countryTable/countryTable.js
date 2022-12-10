@@ -135,20 +135,20 @@ export default function CountryTable({rows}) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
-  const handleRequestSort = (event, property) => {
+  const handleRequestSort = React.useCallback((event, property) => {
     const isAsc = orderBy === property && order === 'asc';
     setOrder(isAsc ? 'desc' : 'asc');
     setOrderBy(property);
-  };
+  },[order, orderBy]);
 
-  const handleChangePage = (event, newPage) => {
+  const handleChangePage = React.useCallback((event, newPage) => {
     setPage(newPage);
-  };
+  },[]);
 
-  const handleChangeRowsPerPage = (event) => {
+  const handleChangeRowsPerPage = React.useCallback((event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
-  };
+  },[]);
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =

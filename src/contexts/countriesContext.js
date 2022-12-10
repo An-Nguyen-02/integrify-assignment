@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState} from "react";
 import useFetch from './callAPI/UseFetch';
 
 export const CountriesContext = createContext({
