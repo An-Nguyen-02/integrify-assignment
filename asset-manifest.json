@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.bfefc4e1.css",
-    "main.js": "/static/js/main.19992477.js",
-    "static/js/547.d38e9944.chunk.js": "/static/js/547.d38e9944.chunk.js",
-    "static/js/328.3d14aa6b.chunk.js": "/static/js/328.3d14aa6b.chunk.js",
-    "static/js/787.c17624c3.chunk.js": "/static/js/787.c17624c3.chunk.js",
-    "static/js/34.8192d662.chunk.js": "/static/js/34.8192d662.chunk.js",
-    "static/js/240.1ecce204.chunk.js": "/static/js/240.1ecce204.chunk.js",
-    "index.html": "/index.html",
-    "main.bfefc4e1.css.map": "/static/css/main.bfefc4e1.css.map",
-    "main.19992477.js.map": "/static/js/main.19992477.js.map",
-    "547.d38e9944.chunk.js.map": "/static/js/547.d38e9944.chunk.js.map",
-    "328.3d14aa6b.chunk.js.map": "/static/js/328.3d14aa6b.chunk.js.map",
-    "787.c17624c3.chunk.js.map": "/static/js/787.c17624c3.chunk.js.map",
-    "34.8192d662.chunk.js.map": "/static/js/34.8192d662.chunk.js.map",
-    "240.1ecce204.chunk.js.map": "/static/js/240.1ecce204.chunk.js.map"
+    "main.css": "/integrify-assignment/static/css/main.bfefc4e1.css",
+    "main.js": "/integrify-assignment/static/js/main.ead6d847.js",
+    "static/js/547.d38e9944.chunk.js": "/integrify-assignment/static/js/547.d38e9944.chunk.js",
+    "static/js/328.3d14aa6b.chunk.js": "/integrify-assignment/static/js/328.3d14aa6b.chunk.js",
+    "static/js/787.c17624c3.chunk.js": "/integrify-assignment/static/js/787.c17624c3.chunk.js",
+    "static/js/34.8192d662.chunk.js": "/integrify-assignment/static/js/34.8192d662.chunk.js",
+    "static/js/240.1ecce204.chunk.js": "/integrify-assignment/static/js/240.1ecce204.chunk.js",
+    "index.html": "/integrify-assignment/index.html",
+    "main.bfefc4e1.css.map": "/integrify-assignment/static/css/main.bfefc4e1.css.map",
+    "main.ead6d847.js.map": "/integrify-assignment/static/js/main.ead6d847.js.map",
+    "547.d38e9944.chunk.js.map": "/integrify-assignment/static/js/547.d38e9944.chunk.js.map",
+    "328.3d14aa6b.chunk.js.map": "/integrify-assignment/static/js/328.3d14aa6b.chunk.js.map",
+    "787.c17624c3.chunk.js.map": "/integrify-assignment/static/js/787.c17624c3.chunk.js.map",
+    "34.8192d662.chunk.js.map": "/integrify-assignment/static/js/34.8192d662.chunk.js.map",
+    "240.1ecce204.chunk.js.map": "/integrify-assignment/static/js/240.1ecce204.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bfefc4e1.css",
-    "static/js/main.19992477.js"
+    "static/js/main.ead6d847.js"
   ]
 }
