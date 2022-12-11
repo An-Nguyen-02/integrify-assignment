@@ -8,7 +8,7 @@ export const CountriesContext = createContext({
 
 export const CountriesProvider = ({children}) => {
     const url = "https://restcountries.com/v3.1/all"
-    const {data, loading, error} = useFetch(url)
+    const {data, loading} = useFetch(url)
     const [countries, setCountries] = useState([])
     const value  = {
         countries,
