@@ -15,4 +15,4 @@ This is a website calls API of countries, display them and user can search them 
 - Optimized using fallback, suspense, lazy load, useCallback
 - Use contextAPI to manage countries data 
 - Test with snapshot using Jest
-- Deployed on Netlify.
+- Deployed on Netlify ith redirects.
